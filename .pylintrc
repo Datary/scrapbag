@@ -1,0 +1,10 @@
+[BASIC]
+good-names=logger, ex
+
+[DESIGN]
+min-public-methods=0
+max-parents=15
+max-args=15
+
+[MESSAGES CONTROL]
+disable=W0614, W0703

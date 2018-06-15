@@ -1,0 +1,9 @@
+[run]
+branch = True
+
+[report]
+ignore_errors = True
+show_missing = True
+
+[html]
+title = Datary Python Utils - Coverage report

@@ -1,0 +1,671 @@
+DATA LIST FILE= 'DA2967'
+/ESTUDIO 1-4 CUES 5-9 CCAA 10-11 PROV 12-13 MUN 14-16 TAMUNI 17 EIEX 18 DISTR 19-20 SECCION 21-23
+ENTREV 24-27 P0 28 P101 29 P102 30 P103 31 P104 32 P2 33-34 P3 35-36 P4 37-38 P5 39 P601 40-41
+P602 42-43 P603 44-45 P604 46-47 P605 48-49 P606 50-51 P607 52-53 P608 54-55 P7 56 P8 57 P9 58
+P1001 59-60 P1002 61-62 P1003 63-64 P1004 65-66 P11 67 P12 68 P1301 69 P1302 70 P1303 71 P1304 72
+P1305 73 P1306 74 P1401 75 P1402 76 P1403 77 P1404 78 P1405 79 P1501 80 P1502 81 P1503 82 P1504 83
+P1505 84 P16 85 P17 86-87 P18 88-89 P19 90 P20 91 P2101 92 P2102 93 P2103 94 P2104 95 P2105 96
+P2201 97 P2202 98 P2203 99 P2204 100 P23 101 P2401 102 P2402 103 P2403 104 P2404 105 P2405 106
+P2406 107 P2407 108 P2408 109 P2501 110 P2502 111 P2503 112 P2504 113 P26 114-115 P27 116-117
+P27A 118-119 P28 120 P29 121 P30 122 P31 123 P32 124 P32A01 125 P32A02 126 P32A03 127 P32A04 128
+P32A05 129 P32A06 130 P32A07 131 P32A08 132 P32A09 133 P32A10 134 P33 135 P34 136 P35 137-138
+P36 139-140 P37 141-142 P38 143 P38A 144-145 P39 146 P39A 147 P40 148 P41 149 P42 150-151 P43 152
+P44 153 P44A 154-155 P45 156 P46 157 P46A 158-159 P47 160 P47A 161 P48 162 P49 163 P50 164 P51 165
+P52 166 P53 167-169 P54 170 P54A 171 P55 172-173 P56 174-175 P57 176 P57A 177-179 P58 180 P5901 181
+P5902 182 P5903 183 P5904 184 P6001 185-187 P6002 188-190 P6003 191-193 P6004 194-196 P6005 197-199
+P61 200 P62 201 P63 202 P64 203 I1 204-206 I2 207-209 I3 210-212 I4 213-215 I5 216-218 I6 219-221
+I7 222-224 I8 225-227 I9 228-230 E101 231-232 E102 233-234 E103 235-236 E2 237 E3 238-240 E4 241
+C1 242 C1A 243-244 C2 245 C2A 246 C2B 247-248 C3 249 C4 250-251 PESO 252-259(4) P32A11 260 RECUERDO 261-262
+ESTUDIOS 263 OCUPA 264-265 CONDICION 266-267 ESTATUS 268 .
+
+VARIABLE LABELS
+CCAA 'Comunidad Autónoma'
+/PROV 'Provincia'
+/MUN 'Municipio'
+/TAMUNI 'Tamaño de municipio'
+/EIEX 'Proporción de extranjeros'
+/DISTR 'Distrito'
+/P0 'Nacionalidad de la persona entrevistada'
+/P101 'Personas mayores que viven solas'
+/P102 'Pensionistas'
+/P103 'Parados/as'
+/P104 'Inmigrantes'
+/P2 'Definición de la inmigración'
+/P3 'Estimación del número de extranjeros residentes en España'
+/P4 'Estimación del número de extranjeros residentes en su lugar de residencia'
+/P5 'Valoración del número de personas de otros países que viven en España'
+/P601 'Que tenga un buen nivel educativo'
+/P602 'Que tenga familiares cercanos viviendo aquí'
+/P603 'Que hable castellano o la lengua oficial de esta Comunidad Autónoma'
+/P604 'Que sea de un país de tradición cristiana'
+/P605 'Que sea de raza blanca'
+/P606 'Que tenga mucho dinero'
+/P607 'Que tenga una cualificación laboral de las que España necesita'
+/P608 'Que esté dispuesto/a a adoptar el modo de vida del país'
+/P7 'Política más adecuada respecto a la regularización de inmigrantes ilegales'
+/P8 'Política más adecuada respecto a los que solicitan asilo'
+/P9 'Grado de tolerancia de las leyes que regulan la entrada de inmigrantes en España'
+/P1001 'Países'
+/P1002 'Culturas'
+/P1003 'Religiones'
+/P1004 'Razas'
+/P11 'Trato de los españoles a los inmigrantes extranjeros'
+/P12 'Factor que influye en el trato a los inmigrantes en España'
+/P1301 'Traer a su familia'
+/P1302 'Cobrar el subsidio si se quedan parados/as'
+/P1303 'Votar en las elecciones municipales'
+/P1304 'Votar en las elecciones generales'
+/P1305 'Crear asociaciones para defender sus derechos'
+/P1306 'Obtener la nacionalidad española'
+/P1401 'La presencia de inmigrantes hace que disminuya la calidad de la atención sanitaria'
+/P1402 'Los inmigrantes abusan de la atención sanitaria gratuita'
+/P1403 'Los españoles deberían tener preferencia a la hora de acceder a la atención sanitaria'
+/P1404 'La Administración debe invertir más donde hay muchos inmigrantes para que no empeore la atención sanitaria'
+/P1405 'Aunque tengan los mismos ingresos, se les da más ayudas sanitarias a los inmigrantes que a los españoles'
+/P1501 'La presencia de hijos de inmigrantes en las escuelas es enriquecedora para el conjunto de los alumnos'
+/P1502 'La calidad de la educación empeora en los colegios donde hay muchos hijos de inmigrantes'
+/P1503 'La Administración debe invertir más para que la calidad de la educación no empeore en los colegios donde hay muchos hijos de inmigrantes'
+/P1504 'Los españoles deberían tener preferencia a la hora de elegir el colegio de sus hijos'
+/P1505 'Aunque tengan los mismos ingresos, se les da más ayudas escolares a los inmigrantes que a los españoles'
+/P16 'Valoración de las contraprestaciones que reciben los inmigrantes por lo que aportan'
+/P17 'Aspectos positivos de la inmigración'
+/P18 'Aspectos negativos de la inmigración'
+/P19 'Permisividad con aspectos culturales y religiosos de los inmigrantes'
+/P20 'Grado de contribución de los inmigrantes al enriquecimiento de la cultura española'
+/P2101 'Los inmigrantes desempeñan trabajos que los españoles no quieren hacer'
+/P2102 'Los inmigrantes hacen una importante contribución al desarrollo económico de España'
+/P2103 'Al aceptar sueldos más bajos, los inmigrantes hacen que bajen los salarios'
+/P2104 'Los inmigrantes quitan puestos de trabajo a los españoles'
+/P2105 'Si alguien que viene a vivir y a trabajar aquí se queda en el paro durante mucho tiempo, debería ser expulsado del país'
+/P2201 'A la hora de contratar a una persona, se prefiera contratar a un español antes que a un inmigrante'
+/P2202 'Se excluya a una alumna de un colegio por llevar el velo islámico'
+/P2203 'La gente proteste contra la edificación de una mezquita en su barrio'
+/P2204 'Se expulse del país a los inmigrantes legalmente instalados que cometan cualquier delito'
+/P23 'Valoración positiva/negativa de la inmigración para España'
+/P2401 'Vivir en el mismo barrio en el que viven muchos inmigrantes'
+/P2402 'Vivir en el mismo bloque en el que viven inmigrantes'
+/P2403 'Alquilar un piso a inmigrantes'
+/P2404 'Trabajar/estudiar con inmigrantes'
+/P2405 'Que un inmigrante sea su jefe en el trabajo'
+/P2406 'Que su hijo/a lleve amigos inmigrantes a casa'
+/P2407 'Que su hijo/a se case con una persona inmigrante'
+/P2408 'Llevar a su hijo/a a un colegio donde haya muchos niños hijos de inmigrantes'
+/P2501 'Vecinos/as'
+/P2502 'Compañeros/as'
+/P2503 'Amigos/as'
+/P2504 'Familiares'
+/P26 'Simpatía hacia distintos grupos de inmigrantes'
+/P27 'Antipatía hacia distintos grupos de inmigrantes'
+/P27A 'Razón de la antipatía hacia distintos grupos de inmigrantes'
+/P28 'Valoración de acciones violentas de inmigrantes contra españoles como un problema'
+/P29 'Justificación del racismo por los fenómenos violentos de inmigrantes contra españoles'
+/P30 'Castigo de los ciudadanos que pronuncien insultos racistas'
+/P31 'Grado de aceptación de un partido racista en España'
+/P32 'Percepción de comentarios en contra de los inmigrantes'
+/P32A01 'En su círculo de amigos/as'
+/P32A02 'En su círculo familiar'
+/P32A03 'En la calle (transportes, espacios públicos, etc.)'
+/P32A04 'En la televisión'
+/P32A05 'En la radio'
+/P32A06 'En prensa o revistas'
+/P32A07 'En Internet'
+/P32A08 'En el centro de trabajo o de estudios'
+/P32A09 'En otro lugar'
+/P32A10 'No_sabe'
+/P33 'Grado de atención prestada en los medios de comunicación al tema de la inmigración'
+/P34 'Valoración que transmiten los medios de comunicación de la imagen de la inmigración'
+/P35 'Escala de confianza (0-10) en la gente'
+/P36 'Escala de racismo (0-10)'
+/P37 'Escala de autoubicación ideológica (0-10)'
+/P38 'Participación electoral en las elecciones generales de 2011'
+/P38A 'Recuerdo de voto en las elecciones generales de 2011 de los votantes'
+/P39 'Tenencia de hijos/as en edad escolar no universitaria'
+/P39A 'Tipo de centro en que estudian los hijos/as'
+/P40 'Tipo de servicio sanitario, público o privado, que utiliza'
+/P41 'Sexo de la persona entrevistada'
+/P42 'Edad de la persona entrevistada'
+/P43 'Estado civil de la persona entrevistada'
+/P44 'Permanencia en el lugar de residencia'
+/P44A 'Tiempo de residencia en la ciudad/pueblo'
+/P45 'Residencia en el extranjero de padres/familiares'
+/P46 'Escolarización de la persona entrevistada'
+/P46A 'Nivel de estudios alcanzado por la persona entrevistada'
+/P47 'Religiosidad de la persona entrevistada'
+/P47A 'Grado de práctica religiosa'
+/P48 'Valoración de la situación económica personal'
+/P49 'Clase social subjetiva de la persona entrevistada'
+/P50 'Posibilidad retrospectiva (5 años) de estar en el paro'
+/P51 'Cabeza de familia'
+/P52 'Situación laboral de la persona entrevistada'
+/P53 'Ocupación de la persona entrevistada (CNO94)'
+/P54 'Situación profesional de la persona entrevistada'
+/P54A 'Tipo de empresa u organización de la persona entrevistada'
+/P55 'Rama de actividad de la persona entrevistada (CNAE93)'
+/P56 'Nivel de ingresos del hogar (mensual)'
+/P57 'Lugar de nacimiento (país)'
+/P57A 'Lugar de nacimiento para los nacidos fuera de España (país)'
+/P58 'Número de teléfono'
+/C4 'Codificador/a nº'
+/P32A11 'No_contesta'
+/RECUERDO 'Recuerdo de voto en las elecciones generales de 2011 [recodificada]'
+/ESTUDIOS 'Estudios de la persona entrevistada [recodificada]'
+/OCUPA 'Ocupación de la persona entrevistada (CNO94)'
+/CONDICION 'Condición socioeconómica de la persona entrevistada [recodificada]'
+/ESTATUS 'Estatus socioeconómico de la persona entrevistada [recodificada]'
+.
+
+VALUE LABELS
+CCAA
+1 'Andalucía ' 2 'Aragón ' 3 'Asturias (Principado de) ' 4 'Baleares (Islas) ' 5 'Canarias '
+6 'Cantabria ' 7 'Castilla-La Mancha ' 8 'Castilla y León ' 9 'Cataluña ' 10 'Comunidad Valenciana '
+11 'Extremadura ' 12 'Galicia ' 13 'Madrid (Comunidad de) ' 14 'Murcia (Región de) ' 15 'Navarra (Comunidad Foral de) '
+16 'País Vasco ' 17 'Rioja (La) '
+/PROV
+1 'Álava ' 2 'Albacete ' 3 'Alicante ' 4 'Almería ' 5 'Ávila ' 6 'Badajoz ' 7 'Baleares ' 8 'Barcelona '
+9 'Burgos ' 10 'Cáceres ' 11 'Cádiz ' 12 'Castellón de la Plana ' 13 'Ciudad Real ' 14 'Córdoba '
+15 'Coruña (A) ' 16 'Cuenca ' 17 'Girona ' 18 'Granada ' 19 'Guadalajara ' 20 'Guipúzcoa ' 21 'Huelva '
+22 'Huesca ' 23 'Jaén ' 24 'León ' 25 'Lleida ' 26 'Logroño ' 27 'Lugo ' 28 'Madrid ' 29 'Málaga '
+30 'Murcia ' 31 'Navarra ' 32 'Ourense ' 33 'Oviedo ' 34 'Palencia ' 35 'Palmas (Las) ' 36 'Pontevedra '
+37 'Salamanca ' 38 'Santa Cruz de Tenerife ' 39 'Santander ' 40 'Segovia ' 41 'Sevilla ' 42 'Soria '
+43 'Tarragona ' 44 'Teruel ' 45 'Toledo ' 46 'Valencia ' 47 'Valladolid ' 48 'Vizcaya ' 49 'Zamora '
+50 'Zaragoza '
+/MUN
+0 'Mun. <=100.000 hab. ' 3 'Albacete' 4 'Algeciras' 5 'Alcalá de Henares' 6 'Alcobendas' 7 'Alcorcón'
+12 'Cádiz' 13 'Almería/Baracaldo' 14 'Alicante' 15 'Badalona/Badajoz' 16 'Cartagena/Las Palmas de Gran Canaria'
+19 'Ávila/Barcelona' 20 'Bilbao/Jerez de la Frontera' 21 'Córdoba' 23 'La Laguna' 24 'Gijón'
+28 'Lugo' 30 'A Coruña/Murcia' 34 'Ciudad Real' 37 'Cáceres' 38 'Pontevedra/Santa Cruz de Tenerife/Dos Hermanas'
+40 'Castellón de la Plana/Palma de Mallorca' 41 'Huelva' 44 'Oviedo' 50 'Jaén' 54 'Ourense'
+57 'Vigo' 58 'Fuenlabrada' 59 'Burgos/Vitoria' 65 'Elche/Getafe' 67 'Málaga' 69 'San Sebastián/Marbella'
+74 'Leganés' 75 'Santander' 78 'Cuenca' 79 'Girona/Madrid' 87 'Granada' 89 'León/Logroño' 91 'Sevilla'
+92 'Móstoles' 101 'Hospitalet de Llobregat' 120 'Lleida/Palencia' 121 'Mataró' 125 'Huesca'
+130 'Guadalajara' 148 'Tarragona/Torrejón de Ardoz' 168 'Toledo' 173 'Soria' 186 'Valladolid'
+187 'Sabadell' 194 'Segovia' 201 'Pamplona' 216 'Teruel' 245 'Santa Coloma de Gramanet' 250 'Valencia'
+274 'Salamanca' 275 'Zamora' 279 'Tarrasa' 297 'Zaragoza'
+/TAMUNI
+1 'Menos o igual a 5.000 habitantes ' 2 '5.001 a 20.000 habitantes ' 3 '20.001 a 100.000 habitantes '
+4 'Más de 100.000 habitantes '
+/EIEX
+1 'P<5%' 2 '5>=P<10%' 3 'P>=10'
+/P0
+1 'La nacionalidad española ' 2 'La nacionalidad española y otra '
+/P101
+1 'Mucha' 2 'Bastante' 3 'Poca' 4 'Ninguna' 8 'N.S.' 9 'N.C.'
+/P102
+1 'Mucha' 2 'Bastante' 3 'Poca' 4 'Ninguna' 8 'N.S.' 9 'N.C.'
+/P103
+1 'Mucha' 2 'Bastante' 3 'Poca' 4 'Ninguna' 8 'N.S.' 9 'N.C.'
+/P104
+1 'Mucha' 2 'Bastante' 3 'Poca' 4 'Ninguna' 8 'N.S.' 9 'N.C.'
+/P2
+1 'Extranjeros ' 2 'Nacionalidades o etnias concretas ' 3 'Imagen de las pateras ' 4 'Necesidad de venir a trabajar '
+5 'Analogías con la experiencia de emigrantes españoles ' 6 'Pobreza y desigualdad ' 7 'Sentimiento de empatía y solidaridad '
+8 'Efectos positivos sobre la cultura y economía ' 9 'Aumento desmedido de inmigrantes ' 10 'Ilegalidad, irregularidad '
+11 'Privilegios sociales frente a los españoles ' 12 'Delincuencia e inseguridad ' 13 'Impacto negativo en el mercado laboral '
+14 'Problemas de integración y convivencia ' 15 'Referencias genéricas a que es un problema '
+16 'Sentimientos negativos hacia la inmigración ' 95 'Varias respuestas a la vez ' 96 'Otras respuestas '
+97 'Nada' 98 'N.S.' 99 'N.C.'
+/P3
+97 'Ninguna ' 98 'N.S.' 99 'N.C.'
+/P4
+97 'Ninguna ' 98 'N.S.' 99 'N.C.'
+/P5
+1 'Insuficiente (se necesitan más)' 2 'Aceptable' 3 'Elevado' 4 'Excesivo' 8 'N.S.' 9 'N.C.'
+/P601
+98 'N.S.' 99 'N.C.'
+/P602
+98 'N.S.' 99 'N.C.'
+/P603
+98 'N.S.' 99 'N.C.'
+/P604
+98 'N.S.' 99 'N.C.'
+/P605
+98 'N.S.' 99 'N.C.'
+/P606
+98 'N.S.' 99 'N.C.'
+/P607
+98 'N.S.' 99 'N.C.'
+/P608
+98 'N.S.' 99 'N.C.'
+/P7
+1 'Regularizarlos a todos/as ' 2 'Regularizar solo a los/as que lleven varios años viviendo en España, tengan o no trabajo '
+3 'Regularizar solo a los/as que tengan trabajo en la actualidad, sea cual sea el tiempo que lleven en España '
+4 'Dejar que sigan como están ' 5 'Devolverlos a su país de origen ' 8 'N.S.' 9 'N.C.'
+/P8
+1 'Acogerlas sin restricciones ' 2 'Acogerlas si se comprueba que están perseguidas ' 3 'Acoger solo a un número limitado, si se comprueba que están perseguidas '
+4 'No acogerlas en ningún caso ' 8 'N.S.' 9 'N.C.'
+/P9
+1 'Demasiado tolerantes ' 2 'Más bien tolerantes ' 3 'Correctas' 4 'Más bien duras ' 5 'Demasiado duras '
+6 'No conoce la legislación en materia de inmigración ' 8 'N.S.' 9 'N.C.'
+/P1001
+98 'N.S.' 99 'N.C.'
+/P1002
+98 'N.S.' 99 'N.C.'
+/P1003
+98 'N.S.' 99 'N.C.'
+/P1004
+98 'N.S.' 99 'N.C.'
+/P11
+1 'Con indiferencia ' 2 'Con desprecio ' 3 'Con amabilidad ' 4 'Con desconfianza ' 5 'Con normalidad (igual que si fueran españoles) '
+6 'Con agresividad ' 8 'N.S.' 9 'N.C.'
+/P12
+1 'Su nacionalidad ' 2 'Su cultura ' 3 'Su posición económica ' 4 'El color de la piel ' 5 'Otras respuestas '
+6 'Depende de su actitud, de su comportamiento ' 8 'N.S.' 9 'N.C.'
+/P1301
+1 'Sí' 2 'No' 8 'N.S.' 9 'N.C.'
+/P1302
+1 'Sí' 2 'No' 8 'N.S.' 9 'N.C.'
+/P1303
+1 'Sí' 2 'No' 8 'N.S.' 9 'N.C.'
+/P1304
+1 'Sí' 2 'No' 8 'N.S.' 9 'N.C.'
+/P1305
+1 'Sí' 2 'No' 8 'N.S.' 9 'N.C.'
+/P1306
+1 'Sí' 2 'No' 8 'N.S.' 9 'N.C.'
+/P1401
+1 'Muy de acuerdo' 2 'Más bien de acuerdo' 3 'Más bien en desacuerdo' 4 'Muy en desacuerdo'
+8 'N.S.' 9 'N.C.'
+/P1402
+1 'Muy de acuerdo' 2 'Más bien de acuerdo' 3 'Más bien en desacuerdo' 4 'Muy en desacuerdo'
+8 'N.S.' 9 'N.C.'
+/P1403
+1 'Muy de acuerdo' 2 'Más bien de acuerdo' 3 'Más bien en desacuerdo' 4 'Muy en desacuerdo'
+8 'N.S.' 9 'N.C.'
+/P1404
+1 'Muy de acuerdo' 2 'Más bien de acuerdo' 3 'Más bien en desacuerdo' 4 'Muy en desacuerdo'
+8 'N.S.' 9 'N.C.'
+/P1405
+1 'Muy de acuerdo' 2 'Más bien de acuerdo' 3 'Más bien en desacuerdo' 4 'Muy en desacuerdo'
+8 'N.S.' 9 'N.C.'
+/P1501
+1 'Muy de acuerdo ' 2 'Más bien de acuerdo ' 3 'Más bien en desacuerdo ' 4 'Muy en desacuerdo '
+8 'N.S.' 9 'N.C.'
+/P1502
+1 'Muy de acuerdo ' 2 'Más bien de acuerdo ' 3 'Más bien en desacuerdo ' 4 'Muy en desacuerdo '
+8 'N.S.' 9 'N.C.'
+/P1503
+1 'Muy de acuerdo ' 2 'Más bien de acuerdo ' 3 'Más bien en desacuerdo ' 4 'Muy en desacuerdo '
+8 'N.S.' 9 'N.C.'
+/P1504
+1 'Muy de acuerdo ' 2 'Más bien de acuerdo ' 3 'Más bien en desacuerdo ' 4 'Muy en desacuerdo '
+8 'N.S.' 9 'N.C.'
+/P1505
+1 'Muy de acuerdo ' 2 'Más bien de acuerdo ' 3 'Más bien en desacuerdo ' 4 'Muy en desacuerdo '
+8 'N.S.' 9 'N.C.'
+/P16
+1 'Mucho más de lo que aportan ' 2 'Más de lo que aportan ' 3 'Tanto como aportan ' 4 'Menos de lo que aportan '
+5 'Mucho menos de lo que aportan ' 8 'N.S.' 9 'N.C.'
+/P17
+1 'Impacto positivo sobre la economía ' 2 'Impacto positivo sobre la Seguridad Social y el sistema de pensiones '
+3 'Mano de obra secundaria ' 4 'Abaratamiento del mercado de trabajo ' 5 'Crecimiento de la natalidad '
+6 'Enriquecimiento cultural ' 7 'Es bueno para ellos/as ' 95 'Todo' 96 'Otras respuestas ' 97 'Ninguno '
+98 'N.S.' 99 'N.C.'
+/P18
+1 'Más competitividad en el mercado de trabajo ' 2 'Abaratamiento del mercado de trabajo ' 3 'Exceso de inmigrantes y mala gestión '
+4 'Más privilegios por las ventajas sociales ' 5 'Más problemas de delincuencia e inseguridad '
+6 'Problemas de integración y choque cultural ' 7 'Imposición de su cultura ' 8 'Pobreza, marginalidad, mendicidad '
+95 'Todo' 96 'Otras respuestas ' 97 'Ninguno ' 98 'N.S.' 99 'N.C.'
+/P19
+1 'Aunque aprendan nuestra cultura y costumbres, es bueno que los inmigrantes también mantengan su cultura y costumbres '
+2 'Los inmigrantes deberían poder mantener sólo aquellos aspectos de su cultura y costumbres que no molesten al resto de lo'+'s españoles '
+3 'Los inmigrantes deberían olvidar su cultura y costumbres y adaptarse a las españolas ' 8 'N.S.'
+9 'N.C.'
+/P20
+1 'Mucho' 2 'Bastante' 3 'Poco' 4 'Nada' 8 'N.S.' 9 'N.C.'
+/P2101
+1 'Muy de acuerdo ' 2 'Más bien de acuerdo ' 3 'Más bien en desacuerdo ' 4 'Muy en desacuerdo '
+8 'N.S.' 9 'N.C.'
+/P2102
+1 'Muy de acuerdo ' 2 'Más bien de acuerdo ' 3 'Más bien en desacuerdo ' 4 'Muy en desacuerdo '
+8 'N.S.' 9 'N.C.'
+/P2103
+1 'Muy de acuerdo ' 2 'Más bien de acuerdo ' 3 'Más bien en desacuerdo ' 4 'Muy en desacuerdo '
+8 'N.S.' 9 'N.C.'
+/P2104
+1 'Muy de acuerdo ' 2 'Más bien de acuerdo ' 3 'Más bien en desacuerdo ' 4 'Muy en desacuerdo '
+8 'N.S.' 9 'N.C.'
+/P2105
+1 'Muy de acuerdo ' 2 'Más bien de acuerdo ' 3 'Más bien en desacuerdo ' 4 'Muy en desacuerdo '
+8 'N.S.' 9 'N.C.'
+/P2201
+1 'Muy aceptable ' 2 'Bastante aceptable ' 3 'Poco aceptable ' 4 'Nada aceptable ' 8 'N.S.'
+9 'N.C.'
+/P2202
+1 'Muy aceptable ' 2 'Bastante aceptable ' 3 'Poco aceptable ' 4 'Nada aceptable ' 8 'N.S.'
+9 'N.C.'
+/P2203
+1 'Muy aceptable ' 2 'Bastante aceptable ' 3 'Poco aceptable ' 4 'Nada aceptable ' 8 'N.S.'
+9 'N.C.'
+/P2204
+1 'Muy aceptable ' 2 'Bastante aceptable ' 3 'Poco aceptable ' 4 'Nada aceptable ' 8 'N.S.'
+9 'N.C.'
+/P23
+1 'Muy positiva ' 2 'Positiva ' 3 'Negativa ' 4 'Muy negativa ' 5 'Ni positiva ni negativa '
+8 'N.S.' 9 'N.C.'
+/P2401
+1 'Acepta/ría ' 2 'Trataría de evitarla ' 3 'Rechazaría ' 4 'Depende ' 8 'N.S.' 9 'N.C.'
+/P2402
+1 'Acepta/ría ' 2 'Trataría de evitarla ' 3 'Rechazaría ' 4 'Depende ' 8 'N.S.' 9 'N.C.'
+/P2403
+1 'Acepta/ría ' 2 'Trataría de evitarla ' 3 'Rechazaría ' 4 'Depende ' 8 'N.S.' 9 'N.C.'
+/P2404
+1 'Acepta/ría ' 2 'Trataría de evitarla ' 3 'Rechazaría ' 4 'Depende ' 8 'N.S.' 9 'N.C.'
+/P2405
+1 'Acepta/ría ' 2 'Trataría de evitarla ' 3 'Rechazaría ' 4 'Depende ' 8 'N.S.' 9 'N.C.'
+/P2406
+1 'Acepta/ría ' 2 'Trataría de evitarla ' 3 'Rechazaría ' 4 'Depende ' 8 'N.S.' 9 'N.C.'
+/P2407
+1 'Acepta/ría ' 2 'Trataría de evitarla ' 3 'Rechazaría ' 4 'Depende ' 8 'N.S.' 9 'N.C.'
+/P2408
+1 'Acepta/ría ' 2 'Trataría de evitarla ' 3 'Rechazaría ' 4 'Depende ' 8 'N.S.' 9 'N.C.'
+/P2501
+1 'Sí' 2 'No' 7 'No_procede ' 8 'N.S.' 9 'N.C.'
+/P2502
+1 'Sí' 2 'No' 7 'No_procede ' 8 'N.S.' 9 'N.C.'
+/P2503
+1 'Sí' 2 'No' 7 'No_procede ' 8 'N.S.' 9 'N.C.'
+/P2504
+1 'Sí' 2 'No' 7 'No_procede ' 8 'N.S.' 9 'N.C.'
+/P26
+1 'Marroquíes y otros norteafricanos ' 2 'Rumanos ' 3 'Búlgaros ' 4 'Ecuatorianos ' 5 'Peruanos '
+6 'Colombianos ' 7 'Argentinos ' 8 'Chinos' 9 'Senegaleses ' 10 'Nigerianos ' 11 'Nacionalidades de países del Este '
+12 'Otras nacionalidades latinoamericanas ' 13 'Otras nacionalidades asiáticas ' 14 'Otras nacionalidades europeas '
+15 'Africanos, subsaharianos ' 16 'Negros' 17 'Latinoamericanos (en general) ' 18 'Árabes '
+19 'Integristas ' 20 'Musulmanes ' 21 'Moros' 22 'La gente que busca trabajo, desfavorecidos, los de las pateras '
+23 'Los que causan problemas y delincuencia ' 95 'Todos' 96 'Otras respuestas ' 97 'Ninguno '
+98 'N.S.' 99 'N.C.'
+/P27
+1 'Marroquíes y otros norteafricanos ' 2 'Rumanos ' 3 'Búlgaros ' 4 'Ecuatorianos ' 5 'Peruanos '
+6 'Colombianos ' 7 'Argentinos ' 8 'Chinos' 9 'Senegaleses ' 10 'Nigerianos ' 11 'Nacionalidades de países del Este '
+12 'Otras nacionalidades latinoamericanas ' 13 'Otras nacionalidades asiáticas ' 14 'Otras nacionalidades europeas '
+15 'Africanos, subsaharianos ' 16 'Negros' 17 'Latinoamericanos (en general) ' 18 'Árabes '
+19 'Integristas ' 20 'Musulmanes ' 21 'Moros' 22 'La gente que busca trabajo, desfavorecidos, los de las pateras '
+23 'Los que causan problemas y delincuencia ' 95 'Todos' 96 'Otras respuestas ' 97 'Ninguno '
+98 'N.S.' 99 'N.C.'
+/P27A
+0 'No procede ' 1 'Por su vinculación con la delincuencia. Vienen a robar ' 2 'Porque están organizados en bandas '
+3 'Porque pertenecen a mafias, están relacionados con la droga y la prostitución ' 4 'Por sus creencias religiosas '
+5 'Por el extremismo religioso, fanatismo, vinculación al terrorismo islamista ' 6 'Pos sus costumbres, formas de vida, diferencias culturales '
+7 'Porque son violentos, agresivos, conflictivos, problemáticos ' 8 'Porque son sucios ' 9 'Porque son maleducados, incívicos, no tienen respeto '
+10 'Porque son malas personas, no son legales, no son confiables ' 11 'Por otros rasgos negativos (taimados, bordes, lentos, vagos) '
+12 'Por su actitud hacia la mujer ' 13 'Porque no se integran, forman guetos ' 14 'Porque nos desprecian, se consideran con todos los derechos '
+15 'Respuestas imprecisas de rechazo ' 16 'Respuestas no expresadas en primera persona ' 17 'Por mi experiencia personal '
+18 'Porque son demasiados, nos invaden, se quieren quedar con todo ' 19 'Porque no vienen a trabajar '
+96 'Otras respuestas ' 97 'Todos' 98 'N.S.' 99 'N.C.'
+/P28
+1 'Suponen un problema importante ' 2 'Se trata de hechos aislados ' 8 'N.S.' 9 'N.C.'
+/P29
+1 'En todos los casos ' 2 'En ningún caso ' 3 'Depende ' 8 'N.S.' 9 'N.C.'
+/P30
+1 'En todos los casos ' 2 'En ningún caso ' 3 'Depende ' 8 'N.S.' 9 'N.C.'
+/P31
+1 'Mucha aceptación ' 2 'Bastante aceptación ' 3 'Poca aceptación ' 4 'Ninguna aceptación '
+8 'N.S.' 9 'N.C.'
+/P32
+1 'Sí' 2 'No' 9 'N.C.'
+/P32A01
+0 'No procede' 1 'Sí'
+/P32A02
+0 'No procede' 1 'Sí'
+/P32A03
+0 'No procede' 1 'Sí'
+/P32A04
+0 'No procede' 1 'Sí'
+/P32A05
+0 'No procede' 1 'Sí'
+/P32A06
+0 'No procede' 1 'Sí'
+/P32A07
+0 'No procede' 1 'Sí'
+/P32A08
+0 'No procede' 1 'Sí'
+/P32A09
+0 'No procede' 1 'Sí'
+/P32A10
+0 'No procede' 1 'Sí'
+/P33
+1 'Mucha atención ' 2 'Bastante atención ' 3 'Poca atención ' 4 'Ninguna atención ' 8 'N.S.'
+9 'N.C.'
+/P34
+1 'Muy positiva ' 2 'Más bien positiva ' 3 'Más bien negativa ' 4 'Muy negativa ' 5 'Ni positiva ni negativa '
+8 'N.S.' 9 'N.C.'
+/P35
+98 'N.S.' 99 'N.C.'
+/P36
+98 'N.S.' 99 'N.C.'
+/P37
+98 'N.S.' 99 'N.C.'
+/P38
+1 'Fue a votar y votó ' 2 'No tenía edad para votar ' 3 'Fue a votar pero no pudo hacerlo '
+4 'No fue a votar porque no pudo ' 5 'Prefirió no votar ' 8 'No recuerda ' 9 'N.C.'
+/P38A
+0 'No procede ' 1 'PP' 2 'PSOE' 3 'IU (ICV en Cataluña) ' 4 'UPyD' 5 'CiU' 6 'Amaiur' 7 'PNV'
+8 'ERC' 9 'BNG' 10 'CC' 11 'Compromís-Equo ' 12 'FAC' 13 'Geroa-Bai ' 14 'Otros partidos ' 15 'En blanco '
+77 'Voto nulo ' 98 'No recuerda ' 99 'N.C.'
+/P39
+1 'Sí' 2 'No' 9 'N.C.'
+/P39A
+0 'No procede ' 1 'Privado ' 2 'Concertado ' 3 'Público ' 4 'Cada uno a un tipo de centro distinto '
+9 'N.C.'
+/P40
+1 'Servicios sanitarios privados/sanidad privada ' 2 'Servicios sanitarios públicos/sanidad pública '
+3 'Servicios sanitarios privados y públicos por igual ' 9 'N.C.'
+/P41
+1 'Hombre' 2 'Mujer'
+/P42
+/P43
+1 'Casado/a ' 2 'Soltero/a ' 3 'Viudo/a' 4 'Separado/a ' 5 'Divorciado/a ' 9 'N.C.'
+/P44
+1 'Sí' 2 'No' 9 'N.C.'
+/P44A
+0 'Menos de 1 año ' 98 'N.S.' 99 'N.C.'
+/P45
+1 'Solo el entrevistado/a ' 2 'Solo el padre y/o madre ' 3 'El entrevistado/a y sus padres '
+4 'Otros familiares ' 7 'Ninguno ' 9 'N.C.'
+/P46
+1 'No, es analfabeto/a ' 2 'No, pero sabe leer y escribir ' 3 'Sí, ha ido a la escuela ' 9 'N.C.'
+/P46A
+0 'No procede' 1 'Menos de 5 años de escolarización ' 2 'Educación primaria ' 3 'ESO o Bachiller elemental '
+4 'FP de grado medio ' 5 'Bachillerato LOGSE ' 6 'FP de grado superior ' 7 'Arquitecto/Ingeniero Técnico '
+8 'Diplomado' 9 'Arquitecto/Ingeniero Superior ' 10 'Licenciatura' 11 'Estudios Postgrado o especialización '
+99 'N.C.'
+/P47
+1 'Católico/a ' 2 'Creyente de otra religión ' 3 'No creyente/Agnóstico/a ' 4 'Ateo/a' 9 'N.C.'
+/P47A
+0 'No procede ' 1 'Muy practicante ' 2 'Bastante practicante ' 3 'Poco practicante ' 4 'Nada practicante '
+8 'N.S.' 9 'N.C.'
+/P48
+1 'Muy buena' 2 'Buena' 3 'Ni buena ni mala ' 4 'Mala' 5 'Muy mala' 8 'N.S.' 9 'N.C.'
+/P49
+1 'Alta' 2 'Media-alta' 3 'Media' 4 'Media-baja' 5 'Baja' 8 'N.S./N.C.' 9 'N.S./N.C.'
+/P50
+1 'Sí' 2 'No' 9 'N.C.'
+/P51
+1 'La persona entrevistada ' 2 'Otra persona ' 3 'La persona entrevistada y otra persona casi a partes iguales '
+9 'N.C.'
+/P52
+1 'Trabaja' 2 'Jubilado/a o pensionista (anteriormente ha trabajado) ' 3 'Pensionista (anteriormente no ha trabajado) '
+4 'Parado/a y ha trabajado antes ' 5 'Parado/a y busca su primer empleo ' 6 'Estudiante' 7 'Trabajo doméstico no remunerado '
+8 'Otra situación ' 9 'N.C.'
+/P53
+1 'Escala superior' 2 'Escala media' 3 'Escala básica' 4 'Fuerzas Armadas (sin especificar)'
+101 'Poder ejecutivo y legislativo y Consejo General del Poder Judicial' 102 'Personal directivo de la Administración Pública'
+103 'Gobierno local' 104 'Dirección de organizaciones de intereses' 111 'Dirección general y presidencia ejecutiva'
+112 'Dirección de departamento de producción' 113 'Dirección de áreas y departamentos especializados'
+121 'Gerencia de empresas de comercio al por mayor con menos de 10 asalariados' 122 'Gerencia de empresas de comercio al por menor con menos de 10 asalariados'
+131 'Gerencia de empresas de hospedaje con menos de 10 asalariados' 132 'Gerencia de empresas de restauración con menos de 10 asalariados'
+140 'Gerencia de otras empresas con menos de 10 asalariados' 151 'Gerencia de empresas de comercio al por mayor sin asalariados'
+152 'Gerencia de empresas de comercio al por menor sin asalariados' 161 'Gerencia de empresas de hospedaje sin asalariados'
+162 'Gerencia de empresas de restauración sin asalariados' 170 'Gerencia de otras empresas sin asalariados'
+201 'Físicos, químicos y asimilados' 202 'Matemáticos, estadísticos y asimilados' 203 'Profesionales de la informática de nivel superior'
+204 'Arquitectos y asimilados' 205 'Ingenieros superiores y asimilados' 211 'Profesionales en ciencias naturales'
+212 'Médicos y odontólogos' 213 'Veterinarios' 214 'Farmacéuticos' 219 'Otros profesionales de nivel superior de la sanidad'
+221 'Profesores de Universidades y otros centros de enseñanza superior' 222 'Profesores de enseñanza secundaria'
+223 'Otros profesionales de la enseñanza' 231 'Abogados y fiscales' 232 'Jueces y magistrados'
+239 'Otros profesionales del derecho' 241 'Profesionales en organización y administración de empresas'
+242 'Economistas' 243 'Sociólogos, historiadores, filósofos, filólogos, psicólogos y asimilados'
+251 'Escritores y artistas de la creación o de la interpretación' 252 'Archiveros, bibliotecarios y profesionales asimilados'
+253 'Diversos profesionales de la Administración Pública que no pueden ser clasificados en apartados anteriores'
+261 'Profesionales asociados a una titulación de 1 ciclo universitario en ciencias físicas, químicas y asimilados'
+262 'Profesionales asociados a una titulación de 1 ciclo universitario en matemáticas, estadística y asimilados'
+263 'Profesionales de nivel medio de informática' 264 'Arquitectos técnicos' 265 'Ingenieros técnicos en construcción'
+271 'Profesionales asociados a una titulación de 1er ciclo universitario en ciencias naturales'
+272 'Enfermeros' 281 'Profesores de enseñanza primaria e infantil' 282 'Profesores de educación especial'
+283 'Profesorado técnico de formación profesional' 291 'Diplomados en contabilidad y graduados sociales y técnicos de empresas y actividades turísticas'
+292 'Ayudantes de archivos, bibliotecas y asimilados' 293 'Diplomados en trabajo social' 294 'Sacerdotes de las distintas religiones'
+295 'Otros profesionales de la Administración Pública que no pueden ser clasificados anteriormente'
+301 'Delineantes y diseñadores técnicos' 302 'Técnicos de las ciencias físicas, químicas y de las ingenierías'
+303 'Profesionales técnicos de la informática' 304 'Operadores de equipos ópticos y electrónicos'
+305 'Profesionales en navegación marítima' 306 'Profesionales en navegación aeronáutica' 307 'Técnicos en edificación, seguridad en el trabajo y control de calidad'
+311 'Técnicos de las ciencias naturales y profesionales auxiliares asimilados' 312 'Técnicos de sanidad'
+313 'Diversos técnicos de sanidad no clasificados en rúbricas anteriores' 321 'Técnicos en educación infantil y educación especial'
+322 'Instructores de vuelo, navegación y conducción de vehículos' 331 'Profesionales de apoyo en operaciones financieras y algunas operaciones comerciales'
+332 'Representantes de comercio y técnicos de ventas' 341 'Profesionales de apoyo de la gestión administrativa, con tareas administrativas generales'
+342 'Profesionales de carácter administrativo de aduanas, de tributos y asimilados que trabajan en tareas propias de la Admin'+'istración Pública'
+351 'Consignatarios y agentes en la contratación de mano de obra' 352 'Inspectores de policía y detectives'
+353 'Profesionales de apoyo de promoción social' 354 'Profesionales del mundo artístico, del espectáculo y de los deportes'
+355 'Auxiliares laicos de las religiones' 401 'Auxiliares, contables y financieros' 402 'Empleados de registro de materiales, de servicios de apoyo a la producción y al transporte'
+410 'Empleados de bibliotecas, servicios de correos y asimilados' 421 'Taquígrafos y mecanógrafos'
+422 'Grabadores de datos' 430 'Auxiliares administrativos sin tareas de atención al público no clasificados anteriormente'
+440 'Auxiliares administrativos con tareas de atención al público' 451 'Empleados de información y recepcionistas en oficinas'
+452 'Empleados en agencias de viajes, recepcionistas en establecimientos distintos de oficinas y telefonistas'
+460 'Cajeros, taquilleros y otros empleados asimilados de trato directo con el público' 501 'Cocineros y otros preparadores de comidas'
+502 'Camareros, bármanes y asimilados' 503 'Jefes de cocineros, camareros y asimilados' 511 'Auxiliares de enfermería y asimilados'
+512 'Trabajadores que se dedican al cuidado de personas y asimilados (excepto auxiliares de enfermería)'
+513 'Peluqueros, especialistas en tratamiento de belleza y trabajadores asimilados' 514 'Trabajadores que atienden a viajeros y asimilados'
+515 'Mayordomos, ecónomos y asimilados' 519 'Otros trabajadores de servicios personales' 521 'Policías'
+522 'Bomberos' 523 'Funcionarios de prisiones' 524 'Guardias jurados y personal de seguridad privado'
+529 'Otros trabajadores de los servicios de protección y seguridad' 531 'Modelos de moda, arte y publicidad'
+532 'Encargado de sección dentro de un comercio y asimilados' 533 'Dependientes y exhibidores en tiendas, almacenes, quioscos y mercadillos'
+601 'Trabajadores cualificados por cuenta propia en explotaciones agrícolas' 602 'Trabajadores cualificados por cuenta ajena en explotaciones agrícolas'
+611 'Trabajadores cualificados por cuenta propia en actividades ganaderas' 612 'Trabajadores cualificados por cuenta ajena en actividades ganaderas'
+621 'Trabajadores cualificados por cuenta propia en explotaciones agropecuarias' 622 'Trabajadores cualificados por cuenta propia en explotaciones forestales y asimilados'
+623 'Trabajadores cualificados por cuenta ajena en explotaciones agropecuarias' 624 'Trabajadores cualificados por cuenta ajena en explotaciones forestales y asimilados'
+631 'Pescadores y trabajadores cualificados por cuenta propia de la piscifactoría' 632 'Pescadores y trabajadores cualificados por cuenta ajena de la piscifactoría'
+701 'Encargados y jefes de equipo en obras estructurales de la construcción' 702 'Jefes de taller y encargados de trabajadores de acabados de edificios'
+703 'Encargados de pintores empapeladores y asimilados' 711 'Albañiles y mamposteros' 712 'Trabajadores en hormigón armado, enfoscadores, ferrallistas y asimilados'
+713 'Carpinteros (excepto carpinteros de estructuras metálicas)' 714 'Otros trabajadores de las obras estructurales de construcción'
+721 'Revocadores, escayolistas y estuquistas' 722 'Fontaneros e instaladores de tuberías' 723 'Electricista de construcción y asimilados'
+724 'Pintores, barnizadores, empapeladores y asimilados' 725 'Personal de limpieza de fachadas de edificios y deshollinadores'
+729 'Otros trabajadores de acabados de construcción y asimilados' 731 'Jefes de taller y encargados de moldeadores, soldadores, montadores de'
+732 'Jefes de taller de vehículos de motor' 733 'Jefes de taller de máquinas agrícolas e industriales y motores de avión'
+734 'Jefes de equipos de mecánicos y ajustadores de equipos eléctricos y electrónicos' 741 'Encargados y capataces de la minería'
+742 'Mineros, canteros, pegadores y labrantes de piedras' 751 'Moldeadores, soldadores, chapistas, montadores de estructuras metálicas y trabajadores asimilados'
+752 'Herreros, elaboradores de herramientas y asimilados' 761 'Mecánicos y ajustadores de maquinaria'
+762 'Mecánicos y ajustadores de equipos eléctricos y electrónicos' 771 'Mecánicos de precisión en metales y materiales similares'
+772 'Trabajadores de artes gráficas y asimilados' 773 'Ceramistas, vidrieros y asimilados' 774 'Artesanos de la madera, de textiles, del cuero y materiales similares'
+780 'Trabajadores de la industria de la alimentación, bebidas y tabaco' 791 'Trabajadores que tratan la madera y asimilados'
+792 'Ebanistas y trabajadores asimilados' 793 'Trabajadores de la industria textil, la confección y asimilados'
+794 'Trabajadores de la industria de la piel, del cuero y del calzado' 800 'Encargado (sin especificar)'
+801 'Encargados de instalaciones mineras' 802 'Encargados de instalaciones de procesamiento de metales'
+803 'Encargados de taller de vidriería, cerámica y asimilados' 804 'Encargados de talleres de madera y jefes de equipo en la fabricación de papel'
+805 'Jefes de equipo en instalaciones de tratamiento químico' 806 'Jefes de equipo en instalaciones de producción de energía y asimilados'
+807 'Jefes de equipo de operadores de robots industriales' 811 'Operadores en instalaciones de la extracción y explotación de minerales'
+812 'Operadores en instalaciones para la obtención y transformación de metales' 813 'Operadores en instalaciones para la obtención, transformación y manipulado del vidrio y la cerámica y asimilados'
+814 'Operadores en instalaciones para el trabajo de la madera y la fabricación de papel' 815 'Operadores en plantas industriales químicas'
+816 'Operadores de plantas para producción de energía y similares' 817 'Operadores de robots industriales'
+821 'Encargado de operadores de máquinas para trabajar metales' 822 'Encargado de operadores de máquinas para fabricar productos químicos'
+823 'Encargado de operadores de máquinas para fabricar productos de caucho y de material plástico'
+824 'Encargado de operadores de máquinas para fabricar productos de madera' 825 'Jefes de taller de imprenta, encuadernación y fabricación de productos de papel'
+826 'Encargado de operadores de máquinas para fabricar productos textiles y artículos de piel y cuero'
+827 'Encargado de operadores de máquinas para elaborar productos alimenticios, bebidas y tabaco'
+828 'Encargado de montadores' 831 'Operadores de máquinas para trabajar metales y otros productos minerales'
+832 'Operadores de máquinas para fabricar productos químicos' 833 'Operadores de máquinas para fabricar productos de caucho y plástico'
+834 'Operadores de máquinas para fabricar productos de madera' 835 'Operadores de máquinas para imprimir, encuadernar y para fabricar productos de papel y cartón'
+836 'Operadores de máquinas para fabricar productos textiles y artículos de piel y cuero' 837 'Operadores de máquinas para elaborar productos alimenticios, bebidas y tabaco'
+841 'Montadores y ensambladores' 849 'Otros montadores y ensambladores' 851 'Maquinistas de locomotoras y asimilados'
+852 'Encargado de operadores de maquinaria de movimiento de tierras y de materiales' 853 'Operadores de maquinaria agrícola móvil'
+854 'Operadores de otras máquinas móviles' 855 'Marineros de cubierta de barco y asimilados'
+861 'Taxistas y conductores de automóviles y furgonetas' 862 'Conductores de autobuses' 863 'Conductores de camiones'
+864 'Conductores de motocicletas y ciclomotores, incluidos mensajeros' 870 'Obrero cualificado (sin especificar)'
+900 'Vendedores ambulantes y asimilados' 911 'Empleados del hogar' 912 'Personal de limpieza de oficinas, hoteles y otros trabajadores asimilados'
+921 'Conserje de edificios, limpiacristales y asimilados' 922 'Vigilantes, guardianes y asimilados'
+931 'Limpiabotas y otros trabajadores de oficios callejeros' 932 'Ordenanzas' 933 'Mozos de equipaje y asimilados'
+934 'Lectores de contadores (agua...) y recolectores de dinero de máquinas expendedoras' 935 'Recogedores de basura y obreros asimilados'
+941 'Peones agrícolas' 942 'Peones ganaderos' 943 'Peones agropecuarios' 944 'Peones forestales'
+945 'Peones de la pesca' 950 'Peones de la minería' 960 'Peones de la construcción' 970 'Peones de industrias manufactureras'
+980 'Peones del transporte y descargadores' 997 'Nunca ha trabajado' 998 'Poca información'
+/P54
+1 'Asalariado/a fijo ' 2 'Asalariado/a eventual o interino/a ' 3 'Empresario/a o profesional con asalariados/as '
+4 'Profesional o trabajador/a autónomo/a (sin asalariados/as) ' 5 'Ayuda familiar (sin remuneración reglamentaria) '
+6 'Miembro de una cooperativa ' 7 'Otra situación ' 9 'N.C.'
+/P54A
+0 'No procede' 1 'Administración Pública ' 2 'Empresa pública ' 3 'Empresa privada ' 4 'Organización sin fines de lucro '
+5 'Servicio doméstico ' 6 'Otras respuestas' 9 'N.C.'
+/P55
+1 'Agricultura, ganadería, caza, silvicultura ' 5 'Pesca, acuicultura ' 10 'Extracción de productos energéticos '
+12 'Extracción de otros minerales ' 15 'Industrias de la alimentación, bebidas y tabaco ' 17 'Industria textil de la confección '
+19 'Industria del cuero y del calzado ' 20 'Industria de la madera y el corcho ' 21 'Industria del papel '
+23 'Refino de petróleo, coquerías y combustibles nucleares ' 24 'Industria química ' 25 'Fabricación de productos de caucho y materias plásticas '
+26 'Fabricación de otros productos minerales no metálicos ' 27 'Metalurgia y fabricación de productos metálicos '
+29 'Fabricación de equipos mecánicos: oficina e informáticos ' 31 'Industria de materia y equipo electrónico '
+34 'Fabricación de todo tipo de material de transporte ' 36 'Fabricación de muebles ' 40 'Producción y distribución de energía eléctrica, gas y agua '
+45 'Construcción, climatización, e instalaciones eléctricas ' 50 'Comercio: farmacias y todo tipo de reparaciones '
+55 'Hostelería ' 60 'Transporte, almacenamiento, correos, comunicaciones ' 65 'Intermediación financiera '
+70 'Actividades inmobiliarias, informáticas, consultorías ' 75 'Administración pública, defensa, seguridad social '
+80 'Educación ' 85 'Actividades sanitarias y veterinarias ' 90 'Actividades de saneamiento público '
+91 'Actividades asociativas diversas ' 92 'Actividades recreativas, culturales y deportivas '
+93 'Actividades diversas de servicios personales ' 95 'Hogares que emplean personal doméstico '
+96 'Organismos extraterritoriales ' 99 'N.C.'
+/P56
+1 'Menos o igual a 300 euros ' 2 'De 301 a 600 euros ' 3 'De 601 a 900 euros ' 4 'De 901 a 1.200 euros '
+5 'De 1.201 a 1.800 euros ' 6 'De 1.801 a 2.400 euros ' 7 'De 2.401 a 3.000 euros ' 8 'De 3.001 a 4.500 euros '
+9 'De 4.501 a 6.000 euros ' 10 'Más de 6.000 euros ' 99 'N.C.'
+/P57
+1 'En España ' 2 'En otro país ' 9 'N.C.'
+/P57A
+0 'No procede' 2 'Alemania ' 3 'Argentina ' 4 'Austria ' 5 'Bélgica ' 6 'Bolivia ' 7 'Brasil '
+8 'Reino Unido ' 9 'Bulgaria ' 10 'Chile' 11 'China' 12 'Colombia ' 13 'República Dominicana '
+14 'Ecuador ' 15 'Egipto ' 16 'Estonia ' 17 'Francia ' 18 'Guinea ' 19 'India' 20 'Italia '
+21 'Mali' 22 'Marruecos ' 23 'Mauritania ' 24 'México ' 25 'Nicaragua ' 26 'Pakistán ' 27 'Paraguay '
+28 'Perú' 29 'Polonia ' 30 'Portugal ' 31 'Rumanía ' 32 'Rusia' 33 'Senegal ' 34 'Suecia' 35 'Suiza'
+36 'Uruguay ' 37 'Venezuela ' 38 'Irak' 39 'Cuba' 40 'Ucrania ' 41 'Nigeria ' 42 'Ghana' 43 'Camerún '
+44 'Gambia ' 45 'Grecia ' 46 'Honduras ' 47 'Corea' 48 'Malta' 49 'Holanda ' 50 'Finlandia '
+51 'Filipinas ' 52 'Moldavia ' 53 'Lituania ' 54 'Armenia ' 55 'Estados Unidos ' 56 'Hungría '
+57 'Mozambique ' 58 'Yugoslavia ' 59 'Argelia' 60 'Irlanda ' 61 'Japón ' 62 'Croacia ' 63 'Canadá '
+64 'Sudáfrica ' 65 'Noruega ' 66 'Siria' 67 'Australia ' 68 'Panamá ' 69 'Jordania ' 70 'Dinamarca '
+71 'Georgia ' 72 'República Checa ' 73 'Congo' 74 'Bangladés ' 75 'El Salvador ' 76 'Angola '
+77 'Eslovaquia ' 78 'Irán' 79 'Sierra Leona ' 80 'Túnez' 81 'Guatemala ' 82 'Cabo Verde ' 83 'Líbano '
+84 'Sudán' 85 'Tailandia ' 86 'Serbia ' 87 'Jamaica ' 88 'Gabón' 89 'Bielorrusia ' 90 'Israel'
+91 'Costa de Marfil ' 92 'Taiwán' 93 'Puerto Rico ' 94 'Palestina ' 95 'Kirguistán ' 96 'Albania '
+97 'Letonia ' 98 'Andorra ' 99 'Turquía ' 100 'Bahamas ' 101 'Togo' 102 'Bosnia ' 103 'Tanzania '
+104 'Arabia Saudita ' 105 'Vietnam ' 106 'Kenia' 107 'Kazajistán ' 108 'Benín' 109 'Somalia '
+110 'Costa Rica ' 111 'Mongolia ' 112 'Zambia' 113 'Burkina Faso ' 114 'Islandia ' 115 'Eslovenia '
+116 'Malasia ' 117 'Bali' 118 'Etiopía ' 119 'Haití' 120 'Trinidad/Tobago ' 121 'Azerbaiyán '
+122 'Camboya ' 123 'Nepal ' 124 'Nueva Zelanda ' 125 'Sri Lanka ' 999 'N.C.'
+/P58
+1 'Tiene teléfono y da número' 2 'No tiene teléfono' 3 'Tiene teléfono y no da número' 9 'N.C.'
+/C4
+0 'Anonimizado'
+/P32A11
+0 'No procede' 1 'Sí'
+/RECUERDO
+1 'PP' 2 'PSOE' 3 'IU (ICV en Cataluña) ' 4 'UPyD' 5 'CiU' 6 'Otros partidos ' 7 'Voto nulo '
+8 'No tenía edad para votar ' 9 'En blanco ' 10 'No votó' 11 'No recuerda ' 99 'N.C.'
+/ESTUDIOS
+1 'Sin estudios ' 2 'Primaria ' 3 'Secundaria ' 4 'FP ' 5 'Medios universitarios ' 6 'Superiores '
+9 'N.C.'
+/OCUPA
+1 'Dirección de empresas y administraciones públicas ' 2 'Técnicos/as y profesionales científicos/as e intelectuales '
+3 'Técnicos/as y profesionales de apoyo ' 4 'Empleados/as de tipo administrativo ' 5 'Trabajadores de servicios de restauración y personales '
+6 'Trabajadores cualificados/as de agricultura y pesca ' 7 'Artesanos/as y trabajadores cualificados/as de la industria '
+8 'Operadores/as de maquinaria y montadores ' 9 'Trabajadores no cualificados/as ' 10 'Fuerzas Armadas '
+99 'N.C.'
+/CONDICION
+1 'Directores/as y profesionales' 2 'Técnicos/as y cuadro medios' 3 'Pequeños/as empresarios/as'
+4 'Agricultores/as' 5 'Empleados/as de oficinas y servicios' 6 'Obreros/as cualificados' 7 'Obreros/as no cualificados'
+8 'Jubilados/as y pensionistas' 9 'Parados/as' 10 'Estudiantes' 11 'Trabajo doméstico no remunerado'
+12 'No clasificables'
+/ESTATUS
+1 'Clase alta/ media-alta' 2 'Nuevas clases medias' 3 'Viejas clases medias' 4 'Obreros cualificados'
+5 'Obreros no cualificados' 9 'No consta'
+.
+EXECUTE.
+
+MISSING VALUES
+ P27A (0) P32A01 (0) P32A02 (0) P32A03 (0) P32A04 (0) P32A05 (0) P32A06 (0) P32A07 (0) P32A08 (0)
+ P32A09 (0) P32A10 (0) P38A (0) P39A (0) P44A (0) P46A (0) P47A (0) P54A (0) P57A (0) P32A11 (0)
+.
+EXECUTE.
+WEIGHT BY PESO.
+FREQUENCIES VARIABLES ALL.

@@ -1,0 +1,43 @@
+shared
+*.py[cod]
+
+# Packages
+*.egg
+*.egg-info
+dist
+build
+eggs
+parts
+bin
+var
+sdist
+develop-eggs
+.installed.cfg
+lib
+lib64
+__pycache__
+_build
+*.cache
+
+# Unit test / coverage reports
+.coverage
+.tox
+htmlcov
+
+# Vim
+*.swp
+*.swn
+
+# Sublime
+*.sublime-project
+*.sublime-workspace
+
+# Autoenv
+.env
+
+#
+.DS_Store
+*.swp
+*.swn
+*.out
+**/.ropeproject/

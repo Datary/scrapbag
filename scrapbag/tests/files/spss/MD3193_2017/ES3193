@@ -1,0 +1,593 @@
+DATA LIST FILE= 'DA3193'
+/ESTU 1-4 CUES 5-14 CCAA 15-16 PROV 17-18 MUN 19-21 TAMUNI 22 ENTREV 23-27 P1A01 28 P1A02 29
+P1A03 30 P1A04 31 P1A05 32 P1B01 33 P1B02 34 P1B03 35 P1B04 36 P1B05 37 P1C01 38 P1C02 39 P1C03 40
+P1C04 41 P1C05 42 P1D01 43 P1D02 44 P1D03 45 P1D04 46 P1D05 47 P2 48 P3 49 P4A02 50 P4A03 51
+P4A04 52 P4A05 53 P4A06 54 P4A07 55 P4A08 56 P4A09 57 P4A10 58 P4A11 59 P4A12 60 P4A13 61 P4A14 62
+P4A15 63 P4A98 64 P4A99 65 P4B02 66 P4B03 67 P4B04 68 P4B05 69 P4B06 70 P4B07 71 P4B08 72 P4B09 73
+P4B10 74 P4B11 75 P4B12 76 P4B13 77 P4B14 78 P4B15 79 P4B16 80 P4B17 81 P4B18 82 P4B19 83 P4B20 84
+P4B21 85 P4B98 86 P4B99 87 P4B24 88 P5 89-91 P6 92 P7 93 P8 94 P9 95 P10 96 P11 97 P12 98 P13A02 99
+P13A03 100 P13A04 101 P13A05 102 P13A06 103 P13A07 104 P13A08 105 P13A09 106 P13A10 107 P13A11 108
+P13A12 109 P13A13 110 P13A14 111 P13A15 112 P13A98 113 P13A99 114 P13A18 115 P13A19 116 P13B02 117
+P13B03 118 P13B04 119 P13B05 120 P13B06 121 P13B07 122 P13B08 123 P13B09 124 P13B10 125 P13B11 126
+P13B12 127 P13B13 128 P13B14 129 P13B15 130 P13B16 131 P13B17 132 P13B18 133 P13B19 134 P13B20 135
+P13B21 136 P13B98 137 P13B99 138 P13B24 139 P14 140 P15 141 P16 142 P17 143 P18 144 P19 145
+P20 146-147 P21 148 P22A 149-150 ESTUDIOS 151 P22B01 152 P22B02 153 P22B03 154 P22B04 155 P22B05 156
+P22B06 157 P22B07 158 P22B08 159 P22B09 160 P22B10 161 P22B11 162 P22B99 163 P24 164 P25 165-166
+P25A00 167 P25A01 168 P25A02 169 P25A03 170 P25A04 171 P25A05 172 P25A09 173 P25B 174-176 P26 177
+P27 178 P28 179 P29 180-181 P30 182 P31 183 P31A 184-185 RECUERDO 186-187 P32A 188 P32B 189-191
+P33 192 P34 193 FIJO_MOVIL 194 .
+
+VARIABLE LABELS
+ESTU 'Nº de estudio'
+/CUES 'Nº de cuestionario'
+/CCAA 'Comunidad autónoma'
+/PROV 'Provincia'
+/MUN 'Municipio'
+/TAMUNI 'Tamaño de municipio'
+/ENTREV 'Nº de entrevistador/a'
+/P1A01 'Sí, él/ella lo ha adquirido'
+/P1A02 'Sí, lo ha adquirido otra persona de su hogar'
+/P1A03 'No'
+/P1A04 'No sabe'
+/P1A05 'No contesta'
+/P1B01 'Sí, él/ella lo ha adquirido'
+/P1B02 'Sí, lo ha adquirido otra persona de su hogar'
+/P1B03 'No'
+/P1B04 'No sabe'
+/P1B05 'No contesta'
+/P1C01 'Sí, él/ella lo ha adquirido'
+/P1C02 'Sí, lo ha adquirido otra persona de su hogar'
+/P1C03 'No'
+/P1C04 'No sabe'
+/P1C05 'No contesta'
+/P1D01 'Sí, él/ella lo ha adquirido'
+/P1D02 'Sí, lo ha adquirido otra persona de su hogar'
+/P1D03 'No'
+/P1D04 'No sabe'
+/P1D05 'No contesta'
+/P2 'Capacidad de ahorro mensual en el hogar'
+/P3 'Valoración retrospectiva de la situación económica del hogar (6 meses)'
+/P4A02 'Mayor capacidad de ahorro familiar'
+/P4A03 'Situación favorable que prevalece en su sector de trabajo'
+/P4A04 'Mejora laboral/sueldo'
+/P4A05 'Disminución del gasto familiar'
+/P4A06 'Ha cubierto/cubrirá deudas pendientes/pago de hipoteca'
+/P4A07 'Situación actual/futura del empleo'
+/P4A08 'Incorporación de entrevistado/a/miembro del hogar al mercado de trabajo'
+/P4A09 'Aumento del ingreso familiar'
+/P4A10 'Su situación actual es de estabilidad/ha mejorado'
+/P4A11 'Todos los miembros del hogar trabajan'
+/P4A12 'Situación de la economía general'
+/P4A13 'Intuición/así lo cree'
+/P4A14 'Aumento pensión'
+/P4A15 'Otros'
+/P4A98 'N.S.'
+/P4A99 'N.C.'
+/P4B02 'Alza continuada de precios/inflación'
+/P4B03 'Mayor endeudamiento familiar'
+/P4B04 'Situación que prevalece en su sector de trabajo'
+/P4B05 'Estancamiento del sueldo/laboral'
+/P4B06 'Dificultades económicas familiares/ingreso insuficiente'
+/P4B07 'Aumento del gasto familiar'
+/P4B08 'Situación actual/futura del empleo'
+/P4B09 'Alza del precio de la vivienda/tipo de interés'
+/P4B10 'Entrevistado/a/miembro del hogar está/se quedará en paro'
+/P4B11 'Impacto del euro'
+/P4B12 'Disminución del ingreso familiar'
+/P4B13 'La pensión de jubilación resulta insuficiente'
+/P4B14 'Disminución de su capacidad de ahorro'
+/P4B15 'Efecto de la inmigración'
+/P4B16 'Intuición/así lo cree'
+/P4B17 'Entrevistado/a/miembro del hogar se ha jubilado/jubilará'
+/P4B18 'Pago de hipoteca'
+/P4B19 'Política económica'
+/P4B20 'Crisis económica'
+/P4B21 'Otros'
+/P4B98 'N.S.'
+/P4B99 'N.C.'
+/P4B24 'Situación de la política general'
+/P5 'Número de personas del entorno en paro y buscando trabajo'
+/P6 'Evolución del número de personas del entorno en paro y buscando trabajo (6 meses)'
+/P7 'Valoración retrospectiva de la posibilidad de mejorar o encontrar empleo en España (6 meses)'
+/P8 'Valoración retrospectiva de la situación económica de España (6 meses)'
+/P9 'Valoración prospectiva de la posibilidad de mejorar o encontrar empleo en España (6 meses)'
+/P10 'Valoración prospectiva de la probabilidad de adquirir para el hogar bienes duraderos (1 año)'
+/P11 'Evolución de la capacidad de ahorro personal (1 año)'
+/P12 'Valoración prospectiva de la situación económica del hogar (6 meses)'
+/P13A02 'Mayor capacidad de ahorro familiar'
+/P13A03 'Situación favorable que prevalece en su sector de trabajo'
+/P13A04 'Mejora laboral/sueldo'
+/P13A05 'Disminución del gasto familiar'
+/P13A06 'Ha cubierto/cubrirá deudas pendientes/pago de hipoteca'
+/P13A07 'Situación actual/futura del empleo'
+/P13A08 'Incorporación de entrevistado/a/miembro del hogar al mercado de trabajo'
+/P13A09 'Aumento del ingreso familiar'
+/P13A10 'Su situación actual es de estabilidad'
+/P13A11 'Todos los miembros del hogar trabajan'
+/P13A12 'Situación de la economía general'
+/P13A13 'Intuición/así lo cree'
+/P13A14 'Aumento pensión'
+/P13A15 'Otros'
+/P13A98 'N.S.'
+/P13A99 'N.C.'
+/P13A18 'Política económica'
+/P13A19 'Situación de la política general'
+/P13B02 'Alza continuada de precios/inflación'
+/P13B03 'Mayor endeudamiento familiar'
+/P13B04 'Situación que prevalece en su sector de trabajo'
+/P13B05 'Estancamiento del sueldo/laboral'
+/P13B06 'Dificultades económicas familiares/ingreso insuficiente'
+/P13B07 'Aumento del gasto familiar'
+/P13B08 'Situación actual/futura del empleo'
+/P13B09 'Alza del precio de la vivienda/tipo de interés'
+/P13B10 'Entrevistado/a/miembro del hogar está/se quedará en paro'
+/P13B11 'Impacto del euro'
+/P13B12 'Disminución del ingreso familiar'
+/P13B13 'La pensión de jubilación resulta insuficiente'
+/P13B14 'Disminución de su capacidad de ahorro'
+/P13B15 'Efecto de la inmigración'
+/P13B16 'Intuición/así lo cree'
+/P13B17 'Entrevistado/a/miembro del hogar se ha jubilado/jubilará'
+/P13B18 'Pago de hipoteca'
+/P13B19 'Política económica'
+/P13B20 'Crisis económica'
+/P13B21 'Otros'
+/P13B98 'N.S.'
+/P13B99 'N.C.'
+/P13B24 'Situación de la política general'
+/P14 'Valoración prospectiva de la situación económica de España (6 meses)'
+/P15 'Valoración prospectiva de la inflación en España (1 año)'
+/P16 'Evolución de los tipos de interés en España (1 año)'
+/P17 'Evolución del precio de la vivienda en España (1 año)'
+/P18 'Intención de comprar una vivienda en el próximo año'
+/P19 'Sexo de la persona entrevistada'
+/P20 'Edad de la persona entrevistada'
+/P21 'Escolarización de la persona entrevistada'
+/P22A 'Nivel de estudios completado por la persona entrevistada'
+/ESTUDIOS 'Estudios de la persona entrevistada [recodificada]'
+/P22B01 'Educación primaria'
+/P22B02 'Cualificación profesional grado inicial (FP grado inicial)'
+/P22B03 'Educación secundaria inferior'
+/P22B04 'FP de grado medio'
+/P22B05 'Bachillerato'
+/P22B06 'FP de grado superior'
+/P22B07 'Estudios universitarios medios'
+/P22B08 'Estudios universitarios superiores'
+/P22B09 'Estudios oficiales de posgrado y doctorado'
+/P22B10 'Otros'
+/P22B11 'No está cursando estudios'
+/P22B99 'No contesta'
+/P24 'Estado civil de la persona entrevistada'
+/P25 'Número de personas en el hogar además de la persona entrevistada'
+/P25A00 'Con su cónyuge o pareja'
+/P25A01 'Con sus hijos/as'
+/P25A02 'Con su padre y/o madre'
+/P25A03 'Con hermanos o hermanas (con o sin otros/as ascendientes/parientes)'
+/P25A04 'Con amigos/as o compañeros/as de trabajo'
+/P25A05 'Otra situación (cuidadores/as, servicio doméstico, etc.)'
+/P25A09 'N.C.'
+/P25B 'Número de personas en el hogar con ingresos'
+/P26 'Cabeza de familia'
+/P27 'Nivel de ingresos del hogar'
+/P28 'Situación laboral de la persona entrevistada'
+/P29 'Escala de autoubicación ideológica (1-10)'
+/P30 'Momento de la adquisición de la nacionalidad española'
+/P31 'Participación electoral en las elecciones generales de 2016'
+/P31A 'Recuerdo de voto en las elecciones generales de 2016 de los votantes'
+/RECUERDO 'Recuerdo de voto en las elecciones generales de 2016 [recodificada]'
+/P32A 'Nivel de conocimiento personal de la lengua castellana'
+/P32B 'Lugar de origen para los nacidos fuera de España (país)'
+/P33 'Régimen de tenencia de vivienda'
+/P34 'Régimen de tenencia de vivienda (recodificada)'
+/FIJO_MOVIL 'Tipo de teléfono'
+.
+
+VALUE LABELS
+ESTU
+/CUES
+/CCAA
+1 'Andalucía' 2 'Aragón' 3 'Asturias (Principado de)' 4 'Balears (Illes)' 5 'Canarias' 6 'Cantabria'
+7 'Castilla-La Mancha' 8 'Castilla y León' 9 'Cataluña' 10 'Comunitat Valenciana' 11 'Extremadura'
+12 'Galicia' 13 'Madrid (Comunidad de)' 14 'Murcia (Región de)' 15 'Navarra (Comunidad Foral de)'
+16 'País Vasco' 17 'Rioja (La)' 18 'Ceuta (Ciudad Autónoma de)' 19 'Melilla (Ciudad Autónoma de)'
+/PROV
+1 'Araba/Álava' 2 'Albacete' 3 'Alicante/Alacant' 4 'Almería' 33 'Asturias' 5 'Ávila' 6 'Badajoz'
+7 'Illes Balears' 8 'Barcelona' 9 'Burgos' 10 'Cáceres' 11 'Cádiz' 39 'Cantabria' 12 'Castellón/Castelló'
+13 'Ciudad Real' 14 'Córdoba' 15 'Coruña (A)' 16 'Cuenca' 17 'Girona' 18 'Granada' 19 'Guadalajara'
+20 'Gipuzkoa' 21 'Huelva' 22 'Huesca' 23 'Jaén' 24 'León' 25 'Lleida' 27 'Lugo' 28 'Madrid'
+29 'Málaga' 30 'Murcia' 31 'Navarra' 32 'Ourense' 34 'Palencia' 35 'Palmas (Las)' 36 'Pontevedra'
+26 'Rioja (La)' 37 'Salamanca' 38 'Santa Cruz de Tenerife' 40 'Segovia' 41 'Sevilla' 42 'Soria'
+43 'Tarragona' 44 'Teruel' 45 'Toledo' 46 'Valencia/València' 47 'Valladolid' 48 'Bizkaia' 49 'Zamora'
+50 'Zaragoza' 51 'Ceuta' 52 'Melilla'
+/MUN
+0 'Mun.<=100.000 hab. no capitales de CA o provincia' 1 'Ceuta / Melilla' 3 'Albacete' 4 'Algeciras'
+5 'Alcalá de Henares' 6 'Alcobendas' 7 'Alcorcón' 12 'Cádiz' 13 'Almería / Barakaldo' 14 'Alicante/Alacant'
+15 'Badalona / Badajoz' 16 'Cartagena / Palmas de Gran Canaria (Las)' 19 'Ávila / Barcelona'
+20 'Bilbao / Jerez de la Frontera' 21 'Córdoba' 23 'La Laguna' 24 'Gijón' 26 'Telde' 28 'Lugo'
+30 'Coruña (A) / Murcia' 34 'Ciudad Real' 37 'Cáceres' 38 'Pontevedra / Santa Cruz de Tenerife / Dos Hermanas'
+40 'Castellón de la Plana/Castelló de la Plana / Palma de Mallorca' 41 'Huelva' 44 'Oviedo'
+50 'Jaén' 54 'Ourense' 57 'Vigo' 58 'Fuenlabrada' 59 'Burgos / Vitoria-Gasteiz' 65 'Elche/Elx / Getafe'
+67 'Málaga' 69 'Donostia/San Sebastián / Marbella' 74 'Leganés' 75 'Santander' 78 'Cuenca / Santiago de Compostela'
+79 'Girona / Madrid' 83 'Mérida' 87 'Granada' 89 'León / Logroño' 91 'Sevilla' 92 'Móstoles'
+101 'Hospitalet de Llobregat' 106 'Parla' 120 'Lleida / Palencia' 121 'Mataró' 123 'Reus' 125 'Huesca'
+130 'Guadalajara' 148 'Tarragona / Torrejón de Ardoz' 168 'Toledo' 173 'Soria' 186 'Valladolid'
+187 'Sabadell' 194 'Segovia' 201 'Pamplona/Iruña' 216 'Teruel' 245 'Santa Coloma de Gramenet'
+250 'Valencia' 274 'Salamanca' 275 'Zamora' 279 'Terrassa' 297 'Zaragoza'
+/TAMUNI
+1 'Menos o igual a 2.000 habitantes ' 2 '2.001 a 10.000 habitantes ' 3 '10.001 a 50.000 habitantes '
+4 '50.001 a 100.000 habitantes ' 5 '100.001 a 400.000 habitantes ' 6 '400.001 a 1.000.000 habitantes '
+7 'Más de 1.000.000 habitantes '
+/ENTREV
+0 'Anonimizado'
+/P1A01
+0 'No' 1 'Sí'
+/P1A02
+0 'No' 1 'Sí'
+/P1A03
+0 'No' 1 'Sí'
+/P1A04
+0 'No' 1 'Sí'
+/P1A05
+0 'No' 1 'Sí'
+/P1B01
+0 'No' 1 'Sí'
+/P1B02
+0 'No' 1 'Sí'
+/P1B03
+0 'No' 1 'Sí'
+/P1B04
+0 'No' 1 'Sí'
+/P1B05
+0 'No' 1 'Sí'
+/P1C01
+0 'No' 1 'Sí'
+/P1C02
+0 'No' 1 'Sí'
+/P1C03
+0 'No' 1 'Sí'
+/P1C04
+0 'No' 1 'Sí'
+/P1C05
+0 'No' 1 'Sí'
+/P1D01
+0 'No' 1 'Sí'
+/P1D02
+0 'No' 1 'Sí'
+/P1D03
+0 'No' 1 'Sí'
+/P1D04
+0 'No' 1 'Sí'
+/P1D05
+0 'No' 1 'Sí'
+/P2
+1 'Le resulta difícil llegar a final de mes, por lo que han tenido que contraer deudas ' 2 'Le resulta difícil llegar a final de mes, por lo que han tenido que echar mano de sus ahorros '
+3 'Llega justo a final de mes ' 4 'Ahorra un poco de dinero cada mes ' 5 'Ahorra bastante dinero cada mes '
+8 'N.S.' 9 'N.C.'
+/P3
+1 'Mejor' 2 'Igual (NO LEER)' 3 'Peor' 8 'N.S.' 9 'N.C.'
+/P4A02
+0 'No' 1 'Sí'
+/P4A03
+0 'No' 1 'Sí'
+/P4A04
+0 'No' 1 'Sí'
+/P4A05
+0 'No' 1 'Sí'
+/P4A06
+0 'No' 1 'Sí'
+/P4A07
+0 'No' 1 'Sí'
+/P4A08
+0 'No' 1 'Sí'
+/P4A09
+0 'No' 1 'Sí'
+/P4A10
+0 'No' 1 'Sí'
+/P4A11
+0 'No' 1 'Sí'
+/P4A12
+0 'No' 1 'Sí'
+/P4A13
+0 'No' 1 'Sí'
+/P4A14
+0 'No' 1 'Sí'
+/P4A15
+0 'No' 1 'Sí'
+/P4A98
+0 'No' 1 'Sí'
+/P4A99
+0 'No' 1 'Sí'
+/P4B02
+0 'No' 1 'Sí'
+/P4B03
+0 'No' 1 'Sí'
+/P4B04
+0 'No' 1 'Sí'
+/P4B05
+0 'No' 1 'Sí'
+/P4B06
+0 'No' 1 'Sí'
+/P4B07
+0 'No' 1 'Sí'
+/P4B08
+0 'No' 1 'Sí'
+/P4B09
+0 'No' 1 'Sí'
+/P4B10
+0 'No' 1 'Sí'
+/P4B11
+0 'No' 1 'Sí'
+/P4B12
+0 'No' 1 'Sí'
+/P4B13
+0 'No' 1 'Sí'
+/P4B14
+0 'No' 1 'Sí'
+/P4B15
+0 'No' 1 'Sí'
+/P4B16
+0 'No' 1 'Sí'
+/P4B17
+0 'No' 1 'Sí'
+/P4B18
+0 'No' 1 'Sí'
+/P4B19
+0 'No' 1 'Sí'
+/P4B20
+0 'No' 1 'Sí'
+/P4B21
+0 'No' 1 'Sí'
+/P4B98
+0 'No' 1 'Sí'
+/P4B99
+0 'No' 1 'Sí'
+/P4B24
+0 'No' 1 'Sí'
+/P5
+0 'Ninguna ' 1 '1 persona ' 2 '2 personas ' 3 '3 personas ' 4 '4 personas ' 999 'N.C.'
+/P6
+1 'Más' 2 'El mismo número' 3 'Menos' 8 'N.S.' 9 'N.C.'
+/P7
+1 'Mejor' 2 'Igual (NO LEER)' 3 'Peor' 8 'N.S.' 9 'N.C.'
+/P8
+1 'Mejor' 2 'Igual (NO LEER)' 3 'Peor' 8 'N.S.' 9 'N.C.'
+/P9
+1 'Mejor' 2 'Igual (NO LEER)' 3 'Peor' 8 'N.S.' 9 'N.C.'
+/P10
+1 'Mayores' 2 'Iguales' 3 'Menores' 8 'N.S.' 9 'N.C.'
+/P11
+1 'Mayores' 2 'Iguales' 3 'Menores' 8 'N.S.' 9 'N.C.'
+/P12
+1 'Mejor' 2 'Igual (NO LEER)' 3 'Peor' 8 'N.S.' 9 'N.C.'
+/P13A02
+0 'No' 1 'Sí'
+/P13A03
+0 'No' 1 'Sí'
+/P13A04
+0 'No' 1 'Sí'
+/P13A05
+0 'No' 1 'Sí'
+/P13A06
+0 'No' 1 'Sí'
+/P13A07
+0 'No' 1 'Sí'
+/P13A08
+0 'No' 1 'Sí'
+/P13A09
+0 'No' 1 'Sí'
+/P13A10
+0 'No' 1 'Sí'
+/P13A11
+0 'No' 1 'Sí'
+/P13A12
+0 'No' 1 'Sí'
+/P13A13
+0 'No' 1 'Sí'
+/P13A14
+0 'No' 1 'Sí'
+/P13A15
+0 'No' 1 'Sí'
+/P13A98
+0 'No' 1 'Sí'
+/P13A99
+0 'No' 1 'Sí'
+/P13A18
+0 'No' 1 'Sí'
+/P13A19
+0 'No' 1 'Sí'
+/P13B02
+0 'No' 1 'Sí'
+/P13B03
+0 'No' 1 'Sí'
+/P13B04
+0 'No' 1 'Sí'
+/P13B05
+0 'No' 1 'Sí'
+/P13B06
+0 'No' 1 'Sí'
+/P13B07
+0 'No' 1 'Sí'
+/P13B08
+0 'No' 1 'Sí'
+/P13B09
+0 'No' 1 'Sí'
+/P13B10
+0 'No' 1 'Sí'
+/P13B11
+0 'No' 1 'Sí'
+/P13B12
+0 'No' 1 'Sí'
+/P13B13
+0 'No' 1 'Sí'
+/P13B14
+0 'No' 1 'Sí'
+/P13B15
+0 'No' 1 'Sí'
+/P13B16
+0 'No' 1 'Sí'
+/P13B17
+0 'No' 1 'Sí'
+/P13B18
+0 'No' 1 'Sí'
+/P13B19
+0 'No' 1 'Sí'
+/P13B20
+0 'No' 1 'Sí'
+/P13B21
+0 'No' 1 'Sí'
+/P13B98
+0 'No' 1 'Sí'
+/P13B99
+0 'No' 1 'Sí'
+/P13B24
+0 'No' 1 'Sí'
+/P14
+1 'Mejor' 2 'Igual (NO LEER)' 3 'Peor' 8 'N.S.' 9 'N.C.'
+/P15
+1 'Más' 2 'Igual' 3 'Menos' 8 'N.S.' 9 'N.C.'
+/P16
+1 'Subirá' 2 'Se mantendrá' 3 'Bajará' 8 'N.S.' 9 'N.C.'
+/P17
+1 'Subirá' 2 'Se mantendrá' 3 'Bajará' 8 'N.S.' 9 'N.C.'
+/P18
+1 'Sí' 2 'No' 8 'N.S.' 9 'N.C.'
+/P19
+1 'Hombre' 2 'Mujer'
+/P20
+99 'N.C.'
+/P21
+1 'No, es analfabeto/a ' 2 'No, pero sabe leer y escribir ' 3 'Sí, ha ido a la escuela ' 9 'N.C.'
+/P22A
+0 'No procede ' 1 'Menos de 5 años de escolarización ' 2 'Educación primaria ' 3 'Cualificación profesional grado inicial (FP grado inicial) '
+4 'Educación secundaria inferior ' 5 'FP de grado medio ' 6 'Bachillerato ' 7 'FP de grado superior '
+8 'Estudios universitarios medios ' 9 'Estudios universitarios superiores ' 10 'Estudios oficiales de posgrado y doctorado '
+11 'Otros' 99 'N.C.'
+/ESTUDIOS
+1 'Sin estudios' 2 'Primaria' 3 'Secundaria inferior' 4 'Secundaria superior' 5 'F.P.' 6 'Universitarios'
+7 'Otros' 9 'N.C.'
+/P22B01
+0 'No' 1 'Sí'
+/P22B02
+0 'No' 1 'Sí'
+/P22B03
+0 'No' 1 'Sí'
+/P22B04
+0 'No' 1 'Sí'
+/P22B05
+0 'No' 1 'Sí'
+/P22B06
+0 'No' 1 'Sí'
+/P22B07
+0 'No' 1 'Sí'
+/P22B08
+0 'No' 1 'Sí'
+/P22B09
+0 'No' 1 'Sí'
+/P22B10
+0 'No' 1 'Sí'
+/P22B11
+0 'No' 1 'Sí'
+/P22B99
+0 'No' 1 'Sí'
+/P24
+1 'Casado/a' 2 'Soltero/a' 3 'Viudo/a' 4 'Separado/a' 5 'Divorciado/a' 9 'N.C.'
+/P25
+0 'Vive solo/a ' 1 '1 persona ' 2 '2 personas ' 3 '3 personas ' 4 '4 personas ' 99 'N.C.'
+/P25A00
+0 'No procede ' 1 'Sí' 2 'No'
+/P25A01
+0 'No procede ' 1 'Sí' 2 'No'
+/P25A02
+0 'No procede ' 1 'Sí' 2 'No'
+/P25A03
+0 'No procede ' 1 'Sí' 2 'No'
+/P25A04
+0 'No procede ' 1 'Sí' 2 'No'
+/P25A05
+0 'No procede ' 1 'Sí' 2 'No'
+/P25A09
+0 'No procede ' 1 'Sí' 2 'No'
+/P25B
+0 'Ninguna ' 1 '1 persona ' 2 '2 personas ' 3 '3 personas ' 4 '4 personas ' 997 'No procede'
+999 'N.C.'
+/P26
+0 'No procede ' 1 'La persona entrevistada ' 2 'Otra persona ' 3 'La persona entrevistada y otra casi a partes iguales (NO LEER)'
+9 'N.C.'
+/P27
+1 'Menos de 1.100 € ' 2 'De 1.100 a 1.800 € ' 3 'De 1.801 a 2.700 € ' 4 'De 2.701 a 3.900 € '
+5 'Más de 3.900 € ' 9 'N.C.'
+/P28
+1 'Trabaja' 2 'Jubilado/a o pensionista (ha trabajado) ' 3 'Pensionista (no ha trabajado) '
+4 'Parado/a y ha trabajado antes ' 5 'Parado/a y busca su primer empleo ' 6 'Estudiante' 7 'Trabajo doméstico no remunerado '
+8 'Otra situación ' 9 'N.C.'
+/P29
+1 '1 Izquierda' 10 '10 Derecha' 98 'N.S.' 99 'N.C.'
+/P30
+1 'Desde que nació ' 2 'La ha adquirido con posterioridad ' 3 'No tiene nacionalidad española '
+9 'N.C.'
+/P31
+0 'No procede ' 1 'Fue a votar y votó ' 2 'No tenía edad para votar ' 3 'Fue a votar pero no pudo hacerlo '
+4 'No fue a votar porque no pudo ' 5 'Prefirió no votar ' 6 'No tenía derecho a voto ' 8 'No recuerda '
+9 'N.C.'
+/P31A
+0 'No procede ' 1 'PP' 2 'PSOE' 3 'Unidos Podemos' 4 'Ciudadanos' 5 'En Comú Podem' 6 'Compromís-Podemos-EUPV'
+7 'ERC' 8 'Convergència (CDC)' 9 'En Marea' 10 'EAJ-PNV' 11 'EH Bildu' 12 'CC-PNC' 13 'Otros partidos '
+15 'En blanco ' 77 'Voto nulo ' 98 'No recuerda ' 99 'N.C.'
+/RECUERDO
+0 'No procede ' 1 'PP' 2 'PSOE' 3 'Unidos Podemos' 4 'C''s' 5 'En Comú Podem' 6 'Compromís-Podemos-EUPV'
+7 'ERC' 8 'Convergència (CDC) ' 9 'En Marea' 10 'EAJ-PNV' 11 'Otros' 96 'En blanco ' 77 'Voto nulo '
+95 'No tenía edad para votar ' 97 'No votó' 93 'No tenía derecho a voto ' 98 'No recuerda '
+99 'N.C.'
+/P32A
+0 'No procede ' 1 'Lo habla un poco ' 2 'Lo habla más o menos bien ' 3 'Lo habla con fluidez '
+4 'Lo habla como si fuera nativo/a ' 5 'Es su idioma materno ' 9 'N.C.'
+/P32B
+0 'No procede' 101 'Albania' 102 'Austria' 103 'Bélgica' 104 'Bulgaria' 106 'Chipre' 107 'Dinamarca'
+108 'España' 109 'Finlandia' 110 'Francia' 111 'Grecia' 112 'Hungría' 113 'Irlanda' 114 'Islandia'
+115 'Italia' 116 'Liechtenstein' 117 'Luxemburgo' 118 'Malta' 119 'Mónaco' 120 'Noruega' 121 'Países Bajos'
+122 'Polonia' 123 'Portugal' 124 'Andorra' 125 'Reino Unido' 126 'Alemania' 128 'Rumanía' 129 'San Marino'
+130 'Santa Sede' 131 'Suecia' 132 'Suiza' 135 'Ucrania' 136 'Letonia' 137 'Moldavia' 138 'Bielorrusia'
+139 'Georgia' 141 'Estonia' 142 'Lituania' 143 'República Checa' 144 'República Eslovaca' 145 'Bosnia Herzegovina'
+146 'Croacia' 147 'Eslovenia' 148 'Armenia' 154 'Rusia' 156 'Macedonia' 157 'Serbia' 158 'Montenegro'
+199 'Otros territorios de Europa' 201 'Burkina Faso' 202 'Angola' 203 'Argelia' 204 'Benín'
+205 'Botsuana' 206 'Burundi' 207 'Cabo Verde' 208 'Camerún' 209 'Comoras' 210 'Congo' 211 'Costa de Marfil'
+212 'Yibuti' 213 'Egipto' 214 'Etiopía' 215 'Gabón' 216 'Gambia' 217 'Ghana' 218 'Guinea' 219 'Guinea Bissau'
+220 'Guinea Ecuatorial' 221 'Kenia' 222 'Lesoto' 223 'Liberia' 224 'Libia' 225 'Madagascar'
+226 'Malaui' 227 'Mali' 228 'Marruecos' 229 'Mauricio' 230 'Mauritania' 231 'Mozambique' 232 'Namibia'
+233 'Níger' 234 'Nigeria' 235 'República Centroafricana' 236 'Sudáfrica' 237 'Ruanda' 238 'Santo Tomé y Príncipe'
+239 'Senegal' 240 'Seychelles' 241 'Sierra Leona' 242 'Somalia' 243 'Sudán' 244 'Suazilandia'
+245 'Tanzania' 246 'Chad' 247 'Togo' 248 'Túnez' 249 'Uganda' 250 'República Democrática del Congo'
+251 'Zambia' 252 'Zimbabue' 253 'Eritrea' 299 'Otros territorios de África' 301 'Canadá' 302 'Estados Unidos de América'
+303 'México' 310 'Antigua y Barbuda' 311 'Bahamas' 312 'Barbados' 313 'Belice' 314 'Costa Rica'
+315 'Cuba' 316 'Dominica' 317 'El Salvador' 318 'Granada' 319 'Guatemala' 320 'Haití' 321 'Honduras'
+322 'Jamaica' 323 'Nicaragua' 324 'Panamá' 325 'San Vicente y las Granadinas' 326 'República Dominicana'
+327 'Trinidad y Tobago' 328 'Santa Lucía' 329 'San Cristóbal y Nieves' 340 'Argentina' 341 'Bolivia'
+342 'Brasil' 343 'Colombia' 344 'Chile' 345 'Ecuador' 346 'Guyana' 347 'Paraguay' 348 'Perú'
+349 'Surinam' 350 'Uruguay' 351 'Venezuela' 399 'Otros territorios de América' 401 'Afganistán'
+402 'Arabia Saudita' 403 'Bahrein' 404 'Bangladés' 405 'Myanmar' 407 'China' 408 'Emiratos Árabes Unidos'
+409 'Filipinas' 410 'India' 411 'Indonesia' 412 'Irak' 413 'Irán' 414 'Israel' 415 'Japón' 416 'Jordania'
+417 'Camboya' 418 'Kuwait' 419 'Laos' 420 'Líbano' 421 'Malasia' 422 'Maldivas' 423 'Mongolia'
+424 'Nepal' 425 'Omán' 426 'Pakistán' 427 'Qatar' 430 'Corea' 431 'Corea del Norte (República Popular Democrática)'
+432 'Singapur' 433 'Siria' 434 'Sri Lanka' 435 'Tailandia' 436 'Turquía' 437 'Vietnam' 439 'Brunei'
+440 'Islas Marshall' 441 'Yemen' 442 'Azerbaiyán' 443 'Kazajistán' 444 'Kirguistán' 445 'Tayikistán'
+446 'Turkmenistán' 447 'Uzbekistán' 499 'Otros territorios de Asia' 501 'Australia' 502 'Fiyi'
+504 'Nueva Zelanda' 505 'Papúa Nueva Guinea' 506 'Islas Salomón' 507 'Samoa' 508 'Tonga' 509 'Vanuatu'
+511 'Micronesia' 512 'Tuvalu' 513 'Islas Cook' 515 'Nauru' 516 'Palaos' 517 'Timor Oriental'
+555 'Apátridas' 599 'Otros territorios de Oceanía' 999 'N.S./N.C.'
+/P33
+1 'En propiedad por compra y está totalmente pagada ' 2 'En propiedad por compra y con pagos o hipotecas pendientes '
+3 'En alquiler ' 4 'En propiedad por herencia o donación ' 5 'Cedida gratis o a bajo precio por un/a familiar, la empresa, etc. '
+6 'Otra forma ' 8 'N.S.' 9 'N.C.'
+/P34
+1 'Propietarios/as ' 2 'Propietarios/as con hipoteca ' 3 'En alquiler ' 4 'Otra situación '
+8 'N.S.' 9 'N.C.'
+/FIJO_MOVIL
+1 'Fijo' 2 'Móvil'
+.
+EXECUTE.
+
+MISSING VALUES
+ P22A (0) P25A00 (0) P25A01 (0) P25A02 (0) P25A03 (0) P25A04 (0) P25A05 (0) P25A09 (0) P25B (997)
+ P26 (0) P31 (0) P31A (0) RECUERDO (0) P32A (0) P32B (0).
+EXECUTE.
+FREQUENCIES VARIABLES ALL.
